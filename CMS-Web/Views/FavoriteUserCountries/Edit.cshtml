@@ -1,0 +1,92 @@
+﻿@model CMS_Entity.Db.FavoriteUserCountry
+
+@{
+	ViewBag.Title = "Edit";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+	@Html.Hidden("CountryId", Model.CountryId)
+	@Html.Hidden("UserId", Model.UserId)
+	@Html.Hidden("Id", Model.Id)
+	<div class="box box-default">
+		<div class="with-border">
+			<div class="">
+				<div class="row">
+					<div class="col-xs-2">
+						<img src="@Model.Country.Flag" style="height:45px" alt="Flag">
+					</div>
+					<div class="col-xs-6">
+						<h2>
+							<i class="fa fa-globe"></i> @Model.Country.Name
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box-body">
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-2">
+						@if (Model.IsFavorite)
+						{
+							<i class="fa fa-heart"></i>
+							<b> Remove favorite</b>
+						}
+						else
+						{
+							<i class="fa fa-heart"></i>
+							<b> Add to favorite</b>
+						}
+					</div>
+					<div class="col-md-10">
+						<div class="checkbox">
+							@Html.EditorFor(model => model.IsFavorite)
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					@Html.LabelFor(model => model.Country.Capital, htmlAttributes: new { @class = "control-label col-md-2" })
+					<div class="col-md-10">
+						@Html.DisplayFor(model => model.Country.Capital)
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-2">
+						<b>Map</b>
+					</div>
+					<div class="col-md-10">
+						Map
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-2">
+						<b>Currency</b>
+					</div>
+					<div class="col-md-10">
+						Currency
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					<div class="col-md-10">
+						<input type="submit" value="Save" class="btn btn-default" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>

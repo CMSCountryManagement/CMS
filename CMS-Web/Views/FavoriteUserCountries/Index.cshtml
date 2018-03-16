@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CMS_Entity.Db.FavoriteUserCountry>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Favourite countries</h2>
+
+<p>
+    @Html.ActionLink("Add New", "Search", "Countries")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Country.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsFavorite)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Email)
+            </td>
+            <td>
+                @if (item.IsFavorite)
+                {
+                    <i class="fa fa-heart"></i>
+                }
+                @*@Html.DisplayFor(modelItem => item.IsFavorite)*@
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id })
+            </td>
+        </tr>
+}
+</table>

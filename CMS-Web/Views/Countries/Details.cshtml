@@ -1,0 +1,186 @@
+﻿@model CMS_Entity.Db.Country
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Country</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alpha2Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alpha2Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alpha3Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alpha3Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capital)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capital)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subregion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subregion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Population)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Population)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Demonym)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Demonym)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gini)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gini)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NativeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NativeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumericCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumericCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cioc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cioc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latlng)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latlng)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TopLevelDomain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TopLevelDomain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CallingCodes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CallingCodes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AltSpellings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AltSpellings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Timezones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Timezones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Borders)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Borders)
+        </dd>
+    </dl>
+</div>
+<p>
+	@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
